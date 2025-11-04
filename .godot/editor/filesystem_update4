@@ -1,0 +1,16 @@
+res://menu/menu.tscn
+res://menu/scripts/night.gd
+res://menu/scripts/tvglitch.gd
+res://global.gd
+res://menu/scripts/new_game.gd
+res://menu/scripts/arrow.gd
+res://menu/scripts/newspaper.gd
+res://nightenter/nightenter.tscn
+res://menu/scripts/bg.gd
+res://menu/scripts/static2.gd
+res://menu/scripts/staticBar.gd
+res://menu/scripts/fadein.gd
+res://nightenter/nightenter.gd
+res://nightenter/scripts/nightcount.gd
+res://nightenter/scripts/timer.gd
+res://game/game.tscn

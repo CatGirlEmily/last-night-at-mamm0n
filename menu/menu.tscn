@@ -1,0 +1,125 @@
+[gd_scene load_steps=17 format=3 uid="uid://c3xupys1nh5jm"]
+
+[ext_resource type="Script" uid="uid://xmlnapxq6sa" path="res://menu/scripts/fadein.gd" id="1_j0t7f"]
+[ext_resource type="AudioStream" uid="uid://cm3lnh5f4tyxl" path="res://menu/audio/sus.ogg" id="3_6nwqt"]
+[ext_resource type="Texture2D" uid="uid://d0dge2y8prboy" path="res://menu/sprites/ng.png" id="3_s4hbh"]
+[ext_resource type="Script" uid="uid://djlc1gh0jb8ei" path="res://menu/scripts/new_game.gd" id="4_juveg"]
+[ext_resource type="AudioStream" uid="uid://dphs5ar6r4jwo" path="res://menu/audio/select.wav" id="5_v6yed"]
+[ext_resource type="Texture2D" uid="uid://ds2q8bgpfj2pn" path="res://menu/sprites/arrow.png" id="6_iuxab"]
+[ext_resource type="Texture2D" uid="uid://be2ewmsldcalg" path="res://menu/sprites/m2.png" id="6_juveg"]
+[ext_resource type="Script" uid="uid://dvt1x82gvb6me" path="res://menu/scripts/night.gd" id="6_s4hbh"]
+[ext_resource type="Script" uid="uid://d1wr5f4rcns2b" path="res://menu/scripts/bg.gd" id="7_v6yed"]
+[ext_resource type="Script" uid="uid://cfx8o34l36qli" path="res://menu/scripts/arrow.gd" id="8_dmxns"]
+[ext_resource type="Script" uid="uid://dsxo7tw5cj05c" path="res://menu/scripts/staticBar.gd" id="9_6fswf"]
+[ext_resource type="Texture2D" uid="uid://bnr7d6e1avs0q" path="res://menu/sprites/glitch1.png" id="10_043lm"]
+[ext_resource type="Script" uid="uid://dm47sai111ngp" path="res://menu/scripts/tvglitch.gd" id="10_bc54p"]
+[ext_resource type="Script" uid="uid://devga2vqnesvh" path="res://menu/scripts/static2.gd" id="10_iesyu"]
+[ext_resource type="Texture2D" uid="uid://cccl6okal7hsy" path="res://menu/sprites/intro.png" id="15_3vbpa"]
+[ext_resource type="Script" uid="uid://g0pofdxmr3p0" path="res://menu/scripts/newspaper.gd" id="16_aycgx"]
+
+[node name="menu" type="Node2D"]
+
+[node name="fadein" type="ColorRect" parent="."]
+z_index = 99
+offset_left = -7.0
+offset_top = -4.0
+offset_right = 1930.0
+offset_bottom = 1081.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_j0t7f")
+
+[node name="Sus" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6nwqt")
+volume_db = 7.78
+autoplay = true
+mix_target = 1
+parameters/looping = true
+
+[node name="newGame" type="Button" parent="."]
+z_index = 2
+offset_left = 9.0
+offset_top = 990.0
+offset_right = 447.0
+offset_bottom = 1069.0
+focus_mode = 0
+icon = ExtResource("3_s4hbh")
+flat = true
+icon_alignment = 1
+script = ExtResource("4_juveg")
+
+[node name="Select" type="AudioStreamPlayer" parent="newGame"]
+stream = ExtResource("5_v6yed")
+
+[node name="arrowNewGame" type="Sprite2D" parent="newGame"]
+position = Vector2(462.00003, 42.000122)
+scale = Vector2(1.3787879, 1.3787879)
+texture = ExtResource("6_iuxab")
+script = ExtResource("8_dmxns")
+
+[node name="Night" type="TextureButton" parent="."]
+z_index = 2
+offset_left = 775.0
+offset_top = 992.0
+offset_right = 1047.0
+offset_bottom = 1071.0
+focus_mode = 0
+script = ExtResource("6_s4hbh")
+
+[node name="Select" type="AudioStreamPlayer" parent="Night"]
+stream = ExtResource("5_v6yed")
+
+[node name="arrowNight" type="Sprite2D" parent="Night"]
+position = Vector2(298, 33)
+scale = Vector2(1.3787879, 1.3787879)
+texture = ExtResource("6_iuxab")
+script = ExtResource("8_dmxns")
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("6_juveg")
+script = ExtResource("7_v6yed")
+metadata/_edit_lock_ = true
+
+[node name="staticBar" type="ColorRect" parent="."]
+offset_left = -73.0
+offset_top = 2.0
+offset_right = 2045.0
+offset_bottom = 61.0
+mouse_filter = 2
+color = Color(1.3528494, 1.3528494, 1.3528494, 0.2509804)
+script = ExtResource("9_6fswf")
+
+[node name="static2" type="ColorRect" parent="."]
+offset_left = -83.0
+offset_top = 285.0
+offset_right = 2035.0
+offset_bottom = 416.0
+mouse_filter = 2
+color = Color(1.3528494, 1.3528494, 1.3528494, 0.59607846)
+script = ExtResource("10_iesyu")
+
+[node name="tvglitch" type="TextureRect" parent="."]
+offset_right = 1929.0
+offset_bottom = 1084.0
+mouse_filter = 2
+texture = ExtResource("10_043lm")
+script = ExtResource("10_bc54p")
+metadata/_edit_lock_ = true
+
+[node name="newspaper" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 100
+position = Vector2(973.00006, 542)
+scale = Vector2(1.9013672, 1.4127604)
+texture = ExtResource("15_3vbpa")
+script = ExtResource("16_aycgx")
+
+[node name="blockInput" type="Control" parent="newspaper"]
+z_index = 102
+layout_mode = 3
+anchors_preset = 0
+offset_left = -572.7457
+offset_top = -422.57697
+offset_right = 589.0498
+offset_bottom = 448.05902
