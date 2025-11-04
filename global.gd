@@ -1,12 +1,22 @@
 extends Node
 
-
 var quitTime = 0
 var night = 0
 var starting = false
 
 func getSaveData():
-	night = randi_range(2,6)
+	var save = ConfigFile.new()
+	var response = save.load("user://data.cfg")
+	
+	if response != OK:
+		save.set_value("data", "night", 1)
+		night = 1
+		save.save("user://data.cfg")
+		print("set default data as there was none")
+		return
+	
+	night = save.get_value("data", "night")
+	print("save data loaded!")
 
 func _ready() -> void:
 	Engine.max_fps = 100
@@ -17,9 +27,25 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_released("ESCAPE"): quitTime = 0
 	if quitTime > 0.5: get_tree().quit()
 	if Input.is_action_just_pressed("F2"): restart()
+	if Input.is_action_just_pressed("F1"): nightComplete()
+	if Input.is_action_just_pressed("DEL"): deleteData()
+	
 
 func restart():
 	get_tree().change_scene_to_file("res://menu/menu.tscn")
 	quitTime = 0
 	getSaveData()
 	starting = false
+
+func nightComplete():
+	night += 1
+	saveData()
+
+func deleteData():
+	night = 1
+	saveData()
+	
+func saveData():
+	var save = ConfigFile.new()
+	save.set_value("data", "night", night)
+	save.save("user://data.cfg")
