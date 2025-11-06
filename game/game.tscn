@@ -27,7 +27,7 @@ texture = ExtResource("3_4fuuu")
 script = ExtResource("3_h7iqs")
 
 [node name="hourTime" type="Timer" parent="hourDisplay"]
-wait_time = 10.0
+wait_time = 60.0
 autostart = true
 
 [node name="Survive" type="AudioStreamPlayer" parent="hourDisplay"]

@@ -30,4 +30,3 @@ func _hourPassed():
 func survive():
 	await get_tree().create_timer(30).timeout
 	$Survive.play()
-	
