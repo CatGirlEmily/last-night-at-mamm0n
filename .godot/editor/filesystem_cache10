@@ -1,19 +1,19 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1762449747
+::res://::1762456189
 autoload.gd::GDScript::4562146821521610409::1762446657::0::1::::<>Node<><>0<>0<><>::
 AutoLoad.tscn::PackedScene::3248895097977791929::1762446455::0::1::::<><><>0<>0<><>::uid://b5865kx63s2vd::::res://autoload.gd<>uid://bj3j5mfd8t02w::::res://game/audio/seeyoutomorrow.mp3
 export_presets.cfg::TextFile::-1::1762082542::0::1::::<><><>0<>0<><>::
 global.gd::GDScript::2535948462470452118::1762449241::0::1::::<>Node<><>0<>0<><>::
 icon.png::CompressedTexture2D::7228257525850199683::1762300671::1762432325::1::::<><><>0<>0<>4a5868e9a1de478ba6744a6ecd54d3ed<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
-::res://game/::1762448965
-game.tscn::PackedScene::6741550032462983579::1762448965::0::1::::<><><>0<>0<><>::uid://bpfy4po4ua6pg::::res://game/sprites/office.png<>uid://cjm3wbtvh2xhq::::res://game/scripts/game.gd<>uid://dlsxs63kvdtck::::res://game/scripts/panorama.gd<>uid://dr0sw83ccihyq::::res://game/sprites/am/12am.png<>uid://b1mxorsjy6gpi::::res://game/sprites/office_back.png<>uid://bblsitj11qxn3::::res://game/scripts/hour.gd<>uid://dfk2kkvrnyi15::::res://game/audio/survive.mp3
+::res://game/::1762449801
+game.tscn::PackedScene::6741550032462983579::1762449801::0::1::::<><><>0<>0<><>::uid://bpfy4po4ua6pg::::res://game/sprites/office.png<>uid://cjm3wbtvh2xhq::::res://game/scripts/game.gd<>uid://dlsxs63kvdtck::::res://game/scripts/panorama.gd<>uid://dr0sw83ccihyq::::res://game/sprites/am/12am.png<>uid://b1mxorsjy6gpi::::res://game/sprites/office_back.png<>uid://bblsitj11qxn3::::res://game/scripts/hour.gd<>uid://dfk2kkvrnyi15::::res://game/audio/survive.mp3
 ::res://game/audio/::1762445114
 seeyoutomorrow.mp3::AudioStreamMP3::3076523518486517080::1762299833::1762445114::1::::<><><>0<>0<>3267ba1f5df001afd19d947f546311eb<>res://.godot/imported/seeyoutomorrow.mp3-04020a0dd3ca59e1fb2df05c21f0cf59.mp3str::
 survive.mp3::AudioStreamMP3::7532507822018928546::1762299572::1762445114::1::::<><><>0<>0<>4cdb8ab08e8977bb5d6653777d40faaa<>res://.godot/imported/survive.mp3-3d44cea6a77a8c6c60b977193368b502.mp3str::
 tick tack.mp3::AudioStreamMP3::4246686553231920693::1762298681::1762445114::1::::<><><>0<>0<>b309f77532977eee524bd2ebbf0df165<>res://.godot/imported/tick tack.mp3-d4b05264351dfef56e9c7ff960f2bce5.mp3str::
-::res://game/scripts/::1762448965
+::res://game/scripts/::1762449801
 game.gd::GDScript::5431052939279799938::1762448851::0::1::::<>Node2D<><>0<>0<><>::
-hour.gd::GDScript::2480425887910440658::1762447425::0::1::::<>Sprite2D<><>0<>0<><>::
+hour.gd::GDScript::2480425887910440658::1762449801::0::1::::<>Sprite2D<><>0<>0<><>::
 panorama.gd::GDScript::7969928437755587522::1762448965::0::1::::<>Sprite2D<><>0<>0<><>::
 ::res://game/sprites/::1762444580
 office.png::CompressedTexture2D::3451085033705427168::1762442065::1762442069::1::::<><><>0<>0<>f8ec2b181d768f6c3d87a70f5b5f7b8c<>res://.godot/imported/office.png-73ec62264d894636614c2033e5ed441f.ctex::
@@ -26,8 +26,8 @@ office_back.png::CompressedTexture2D::4237525564424606262::1762442421::176244458
 5am.png::CompressedTexture2D::8859500754721419531::1762435817::1762439661::1::::<><><>0<>0<>e35098f6abf3b1b149021c82aefa977a<>res://.godot/imported/5am.png-0ac460864bdba843d5e0d864b3d38f2c.ctex::
 6am.png::CompressedTexture2D::2620409392230238716::1762435844::1762439661::1::::<><><>0<>0<>954ce5f02c8f6a1d4984d460b0451d4d<>res://.godot/imported/6am.png-1f951ab476ae001d423e3da922f88de5.ctex::
 12am.png::CompressedTexture2D::8405215806731997436::1762300077::1762432465::1::::<><><>0<>0<>f9814129d995a58524ac60bc52f968f7<>res://.godot/imported/12am.png-417d3e4fd7d66f68bb43ec9dd5cc17c1.ctex::
-::res://menu/::1762449241
-menu.tscn::PackedScene::6786852093924272894::1762449241::0::1::::<><><>0<>0<><>::uid://xmlnapxq6sa::::res://menu/scripts/fadein.gd<>uid://cm3lnh5f4tyxl::::res://menu/audio/sus.ogg<>uid://d0dge2y8prboy::::res://menu/sprites/ng.png<>uid://djlc1gh0jb8ei::::res://menu/scripts/new_game.gd<>uid://dphs5ar6r4jwo::::res://menu/audio/select.wav<>uid://ds2q8bgpfj2pn::::res://menu/sprites/arrow.png<>uid://be2ewmsldcalg::::res://menu/sprites/m2.png<>uid://dvt1x82gvb6me::::res://menu/scripts/night.gd<>uid://d1wr5f4rcns2b::::res://menu/scripts/bg.gd<>uid://cfx8o34l36qli::::res://menu/scripts/arrow.gd<>uid://dsxo7tw5cj05c::::res://menu/scripts/staticBar.gd<>uid://bnr7d6e1avs0q::::res://menu/sprites/glitch1.png<>uid://dm47sai111ngp::::res://menu/scripts/tvglitch.gd<>uid://devga2vqnesvh::::res://menu/scripts/static2.gd<>uid://cccl6okal7hsy::::res://menu/sprites/intro.png<>uid://g0pofdxmr3p0::::res://menu/scripts/newspaper.gd
+::res://menu/::1762449754
+menu.tscn::PackedScene::6786852093924272894::1762449754::0::1::::<><><>0<>0<><>::uid://xmlnapxq6sa::::res://menu/scripts/fadein.gd<>uid://cm3lnh5f4tyxl::::res://menu/audio/sus.ogg<>uid://d0dge2y8prboy::::res://menu/sprites/ng.png<>uid://djlc1gh0jb8ei::::res://menu/scripts/new_game.gd<>uid://dphs5ar6r4jwo::::res://menu/audio/select.wav<>uid://ds2q8bgpfj2pn::::res://menu/sprites/arrow.png<>uid://be2ewmsldcalg::::res://menu/sprites/m2.png<>uid://dvt1x82gvb6me::::res://menu/scripts/night.gd<>uid://d1wr5f4rcns2b::::res://menu/scripts/bg.gd<>uid://cfx8o34l36qli::::res://menu/scripts/arrow.gd<>uid://dsxo7tw5cj05c::::res://menu/scripts/staticBar.gd<>uid://bnr7d6e1avs0q::::res://menu/sprites/glitch1.png<>uid://dm47sai111ngp::::res://menu/scripts/tvglitch.gd<>uid://devga2vqnesvh::::res://menu/scripts/static2.gd<>uid://cccl6okal7hsy::::res://menu/sprites/intro.png<>uid://g0pofdxmr3p0::::res://menu/scripts/newspaper.gd
 ::res://menu/audio/::1762248958
 select.wav::AudioStreamWAV::8227691857309192502::1762032201::1762248958::1::::<><><>0<>0<>68615120a4641aa7e2a71b5b22e3c32d<>res://.godot/imported/select.wav-25caad2cfb6d9acbabc5830f914aa36b.sample::
 sus.ogg::AudioStreamOggVorbis::5673601584671748865::1762031401::1762248955::1::::<><><>0<>0<>9a99d946ad9f9322c7d77784a3a48439<>res://.godot/imported/sus.ogg-1fd0994cd8302b6d3e2b6371332f3239.oggvorbisstr::

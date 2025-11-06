@@ -1,3 +1,6 @@
+res://nightfinish/nightfinish.tscn
+res://AutoLoad.tscn
+res://global.gd
 res://menu/menu.tscn
+res://menu/scripts/night.gd
 res://game/game.tscn
-res://game/scripts/hour.gd

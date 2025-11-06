@@ -1,5 +1,7 @@
 extends Node
 
+# hej
+
 var dev = true
 
 var quitTime = 0
