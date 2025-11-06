@@ -5,4 +5,5 @@ func _ready() -> void:
 	
 func _enternight():
 	global.hour = 0
+	global.interact = true
 	get_tree().change_scene_to_file("res://game/game.tscn")

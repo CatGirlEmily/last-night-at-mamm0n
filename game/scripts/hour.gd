@@ -17,9 +17,17 @@ func _ready() -> void:
 	
 func _process(_delta: float) -> void:
 	texture = textures[global.hour]
+	
+	if global.dev && Input.is_action_just_pressed("F4"): _hourPassed()
 
 
 func _hourPassed():
 	if global.hour >= 6: return
 	global.hour += 1
+	if global.hour == 5 && global.night > 2: survive()
 	$hourTime.start()
+
+func survive():
+	await get_tree().create_timer(30).timeout
+	$Survive.play()
+	

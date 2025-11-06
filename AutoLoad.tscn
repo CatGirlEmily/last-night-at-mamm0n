@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmj13ex05p2px"]
+
+[ext_resource type="Script" uid="uid://b5865kx63s2vd" path="res://autoload.gd" id="1_svm81"]
+[ext_resource type="AudioStream" uid="uid://bj3j5mfd8t02w" path="res://game/audio/seeyoutomorrow.mp3" id="2_sbp1w"]
+
+[node name="AutoLoad" type="Node2D"]
+script = ExtResource("1_svm81")
+
+[node name="seeutmrw" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_sbp1w")

@@ -1,13 +1,16 @@
 extends Node
 
+var dev = true
+
 var quitTime = 0
 var night = 0
 var starting = false
 var hour = -1
+var interact = true
 
 func getSaveData():
 	var save = ConfigFile.new()
-	var response = save.load("user://data.cfg")
+	var response = save.load("user://data")
 	
 	if response == OK:
 		night = save.get_value("data", "night")
@@ -15,7 +18,7 @@ func getSaveData():
 	else:
 		save.set_value("data", "night", 1)
 		night = 1
-		save.save("user://data.cfg")		
+		save.save("user://data")		
 	
 
 func _ready() -> void:
@@ -29,8 +32,8 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_released("ESCAPE"): quitTime = 0
 	if quitTime > 0.5: get_tree().quit()
 	if Input.is_action_just_pressed("F2"): restart()
-	if Input.is_action_just_pressed("F1"): get_tree().change_scene_to_file("res://nightfinish/nightfinish.tscn")
-	if Input.is_action_just_pressed("F3"): nightComplete()
+	if global.dev && Input.is_action_just_pressed("F1"): get_tree().change_scene_to_file("res://nightfinish/nightfinish.tscn")
+	if global.dev && Input.is_action_just_pressed("F3"): nightComplete()
 	if Input.is_action_just_pressed("DEL"): deleteData()
 	
 
@@ -43,7 +46,7 @@ func restart():
 func nightComplete():
 	hour = -1
 	starting = false
-	night += 1
+	if night < 6: night += 1
 	saveData()
 
 func deleteData():
@@ -53,4 +56,4 @@ func deleteData():
 func saveData():
 	var save = ConfigFile.new()
 	save.set_value("data", "night", night)
-	save.save("user://data.cfg")
+	save.save("user://data")

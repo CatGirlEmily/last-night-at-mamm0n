@@ -1,18 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3bwlx02acadf"]
+[gd_scene load_steps=8 format=3 uid="uid://c3bwlx02acadf"]
 
 [ext_resource type="Texture2D" uid="uid://bpfy4po4ua6pg" path="res://game/sprites/office.png" id="1_l1rk1"]
+[ext_resource type="Script" uid="uid://cjm3wbtvh2xhq" path="res://game/scripts/game.gd" id="1_u5opy"]
 [ext_resource type="Script" uid="uid://dlsxs63kvdtck" path="res://game/scripts/panorama.gd" id="2_vasa2"]
 [ext_resource type="Texture2D" uid="uid://dr0sw83ccihyq" path="res://game/sprites/am/12am.png" id="3_4fuuu"]
+[ext_resource type="Texture2D" uid="uid://b1mxorsjy6gpi" path="res://game/sprites/office_back.png" id="3_dxrkv"]
 [ext_resource type="Script" uid="uid://bblsitj11qxn3" path="res://game/scripts/hour.gd" id="3_h7iqs"]
+[ext_resource type="AudioStream" uid="uid://dfk2kkvrnyi15" path="res://game/audio/survive.mp3" id="6_dakft"]
 
 [node name="game" type="Node2D"]
+script = ExtResource("1_u5opy")
 
 [node name="Office" type="Sprite2D" parent="."]
 position = Vector2(1440, 540)
-scale = Vector2(1.5, 1)
 texture = ExtResource("1_l1rk1")
 script = ExtResource("2_vasa2")
-metadata/_edit_lock_ = true
+
+[node name="layerBACK" type="Sprite2D" parent="Office"]
+z_index = -1
+texture = ExtResource("3_dxrkv")
 
 [node name="hourDisplay" type="Sprite2D" parent="."]
 z_index = 2
@@ -21,5 +27,17 @@ texture = ExtResource("3_4fuuu")
 script = ExtResource("3_h7iqs")
 
 [node name="hourTime" type="Timer" parent="hourDisplay"]
-wait_time = 6.0
+wait_time = 10.0
 autostart = true
+
+[node name="Survive" type="AudioStreamPlayer" parent="hourDisplay"]
+stream = ExtResource("6_dakft")
+volume_db = -29.017
+mix_target = 1
+
+[node name="overlay" type="ColorRect" parent="."]
+z_index = 101
+offset_right = 1932.0
+offset_bottom = 1095.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

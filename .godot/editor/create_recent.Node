@@ -1,7 +1,8 @@
-Timer
-Sprite2D
-TextureRect
 ColorRect
+AudioStreamPlayer2D
+Sprite2D
+Timer
+TextureRect
 Control
 TextureButton
 Button

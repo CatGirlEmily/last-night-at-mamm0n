@@ -15,7 +15,7 @@ func _ready():
 	texture_normal = textures[0]
 
 func _process(_delta: float) -> void:
-	texture_normal = textures[global.night - 1]
+	if !global.starting: texture_normal = textures[global.night - 1]
 
 func _on_mouse_enter():
 	$Select.play()
