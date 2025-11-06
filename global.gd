@@ -3,31 +3,34 @@ extends Node
 var quitTime = 0
 var night = 0
 var starting = false
+var hour = -1
 
 func getSaveData():
 	var save = ConfigFile.new()
 	var response = save.load("user://data.cfg")
 	
-	if response != OK:
+	if response == OK:
+		night = save.get_value("data", "night")
+		if night > 6: night = 6
+	else:
 		save.set_value("data", "night", 1)
 		night = 1
-		save.save("user://data.cfg")
-		print("set default data as there was none")
-		return
+		save.save("user://data.cfg")		
 	
-	night = save.get_value("data", "night")
-	print("save data loaded!")
 
 func _ready() -> void:
 	Engine.max_fps = 100
 	getSaveData()
 
 func _process(delta: float) -> void:
+	var scene = get_tree().current_scene.name
+	
 	if Input.is_action_pressed("ESCAPE"): quitTime += 1 * delta
 	if Input.is_action_just_released("ESCAPE"): quitTime = 0
 	if quitTime > 0.5: get_tree().quit()
 	if Input.is_action_just_pressed("F2"): restart()
-	if Input.is_action_just_pressed("F1"): nightComplete()
+	if Input.is_action_just_pressed("F1"): get_tree().change_scene_to_file("res://nightfinish/nightfinish.tscn")
+	if Input.is_action_just_pressed("F3"): nightComplete()
 	if Input.is_action_just_pressed("DEL"): deleteData()
 	
 
@@ -38,6 +41,8 @@ func restart():
 	starting = false
 
 func nightComplete():
+	hour = -1
+	starting = false
 	night += 1
 	saveData()
 

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlfkt1xl73gfn"]
+
+[ext_resource type="Script" uid="uid://btebvmqtmt8jy" path="res://nightfinish/main.gd" id="1_m4dqd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_411us"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_m4dqd")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 680.0
+offset_top = 377.0
+offset_right = 797.0
+offset_bottom = 404.0
+text = "night complete"
+label_settings = SubResource("LabelSettings_411us")
+
+[node name="put back in menu" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true

@@ -1,3 +1,6 @@
-res://nightenter/nightenter.tscn
-res://global.gd
 res://game/game.tscn
+res://game/scripts/hour.gd
+res://nightfinish/nightfinish.tscn
+res://global.gd
+res://nightfinish/main.gd
+res://nightenter/nightenter.tscn
