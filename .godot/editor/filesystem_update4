@@ -1,7 +1,0 @@
-res://AutoLoad.tscn
-res://game/game.tscn
-res://global.gd
-res://game/scripts/jumpscare.gd
-res://gameover/gameover.tscn
-res://gameover/scripts/gameover.gd
-res://nightenter/nightenter.tscn
