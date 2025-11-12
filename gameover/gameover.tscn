@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://p4ghonj16vsh"]
+
+[ext_resource type="Script" uid="uid://cy6yfkqlb5wnk" path="res://gameover/scripts/gameover.gd" id="1_klbyb"]
+[ext_resource type="Texture2D" uid="uid://c8nq86r5cvdii" path="res://gameover/sprites/gejover.png" id="3_d573a"]
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource("1_klbyb")
+
+[node name="bg" type="ColorRect" parent="."]
+z_index = -99
+offset_right = 1949.0
+offset_bottom = 1103.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="overlay" type="ColorRect" parent="."]
+visible = false
+z_index = 99
+offset_right = 1949.0
+offset_bottom = 1103.0
+color = Color(1, 0, 0, 1)
+
+[node name="Gejover" type="Sprite2D" parent="."]
+position = Vector2(960, 500)
+texture = ExtResource("3_d573a")

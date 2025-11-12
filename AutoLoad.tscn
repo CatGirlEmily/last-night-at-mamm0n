@@ -8,3 +8,6 @@ script = ExtResource("1_svm81")
 
 [node name="seeutmrw" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_sbp1w")
+
+[node name="rawr" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_sbp1w")

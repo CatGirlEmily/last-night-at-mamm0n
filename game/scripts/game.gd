@@ -7,8 +7,9 @@ var t = 0.0
 func _ready() -> void:
 	$overlay.color.a = 0.0
 	
-
 func _process(delta: float) -> void:
+	global.count = $count.wait_time - $count.time_left
+	
 	if global.hour == 6:
 		global.interact = false
 		
@@ -27,3 +28,7 @@ func _process(delta: float) -> void:
 			get_tree().change_scene_to_file("res://nightfinish/nightfinish.tscn")
 		
 		$overlay.color.a = overlay_a
+
+func _jumpscare_initialize():
+	pass
+	

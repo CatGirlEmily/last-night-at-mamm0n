@@ -42,3 +42,7 @@ offset_right = 1932.0
 offset_bottom = 1095.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="count" type="Timer" parent="."]
+wait_time = 300.0
+autostart = true
