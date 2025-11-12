@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1762943406
+::res://::1762946395
 autoload.gd::GDScript::4562146821521610409::1762886853::0::1::::<>Node<><>0<>0<><>::
 AutoLoad.tscn::PackedScene::3248895097977791929::1762886853::0::1::::<><><>0<>0<><>::uid://b5865kx63s2vd::::res://autoload.gd<>uid://bj3j5mfd8t02w::::res://game/audio/seeyoutomorrow.mp3
 export_presets.cfg::TextFile::-1::1762457338::0::1::::<><><>0<>0<><>::
@@ -26,11 +26,11 @@ office_back.png::CompressedTexture2D::4237525564424606262::1762442421::176244458
 5am.png::CompressedTexture2D::8859500754721419531::1762435817::1762439661::1::::<><><>0<>0<>e35098f6abf3b1b149021c82aefa977a<>res://.godot/imported/5am.png-0ac460864bdba843d5e0d864b3d38f2c.ctex::
 6am.png::CompressedTexture2D::2620409392230238716::1762435844::1762439661::1::::<><><>0<>0<>954ce5f02c8f6a1d4984d460b0451d4d<>res://.godot/imported/6am.png-1f951ab476ae001d423e3da922f88de5.ctex::
 12am.png::CompressedTexture2D::8405215806731997436::1762300077::1762432465::1::::<><><>0<>0<>f9814129d995a58524ac60bc52f968f7<>res://.godot/imported/12am.png-417d3e4fd7d66f68bb43ec9dd5cc17c1.ctex::
-::res://gameover/::1762943406
-gameover.tscn::PackedScene::1113077167806418615::1762943406::0::1::::<><><>0<>0<><>::uid://cy6yfkqlb5wnk::::res://gameover/scripts/gameover.gd<>uid://c8nq86r5cvdii::::res://gameover/sprites/gejover.png
-::res://gameover/scripts/::1762943371
-gameover.gd::GDScript::6522836012323455100::1762943371::0::1::::<>Node2D<><>0<>0<><>::
-::res://gameover/sprites/::1762943468
+::res://gameover/::1762943610
+gameover.tscn::PackedScene::1113077167806418615::1762943610::0::1::::<><><>0<>0<><>::uid://cy6yfkqlb5wnk::::res://gameover/scripts/gameover.gd<>uid://c8nq86r5cvdii::::res://gameover/sprites/gejover.png
+::res://gameover/scripts/::1762943610
+gameover.gd::GDScript::6522836012323455100::1762943610::0::1::::<>Node2D<><>0<>0<><>::
+::res://gameover/sprites/::1762943473
 0.png::CompressedTexture2D::568721700602679440::1761902871::1762903230::1::::<><><>0<>0<>ab8f79bf81a88c776a1828d99f4e966b<>res://.godot/imported/0.png-329038cc65e517e187bec809386755a5.ctex::
 1.png::CompressedTexture2D::1650249462950199047::1762902070::1762903230::1::::<><><>0<>0<>e2a0efe11b17bbfa15e08dade7bc3a72<>res://.godot/imported/1.png-ec540552f488789196356fed40b9a1a5.ctex::
 2.png::CompressedTexture2D::6356274994053477217::1761902871::1762903230::1::::<><><>0<>0<>e52813ac07eb105a3f620788b6a62755<>res://.godot/imported/2.png-f8d2489109972b88289928fe49a4cbd7.ctex::

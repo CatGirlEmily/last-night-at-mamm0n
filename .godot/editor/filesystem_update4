@@ -1,5 +1,4 @@
-res://game/game.tscn
-res://game/scripts/game.gd
-res://global.gd
 res://gameover/scripts/gameover.gd
 res://gameover/gameover.tscn
+res://game/game.tscn
+res://game/scripts/game.gd

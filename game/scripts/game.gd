@@ -1,14 +1,15 @@
 extends Node2D
 
-var dingdong = false
-var overlay_a = 0.0
-var t = 0.0
+var dingdong := false
+var overlay_a := 0.0
+var t := 0.0
+var injumpscare := false
 
 func _ready() -> void:
 	$overlay.color.a = 0.0
 	
 func _process(delta: float) -> void:
-	global.count = $count.wait_time - $count.time_left
+	if !injumpscare: global.count = $count.wait_time - $count.time_left
 	
 	if global.hour == 6:
 		global.interact = false
@@ -30,5 +31,6 @@ func _process(delta: float) -> void:
 		$overlay.color.a = overlay_a
 
 func _jumpscare_initialize():
+	injumpscare = true
 	pass
 	

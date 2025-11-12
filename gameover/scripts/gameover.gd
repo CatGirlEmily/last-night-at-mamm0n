@@ -49,10 +49,15 @@ func _draw():
 	var s1 = seconds / 10
 	var s2 = seconds % 10
 
-	var x := 980
-	var y := 540
-	var c := Color(1,1,1,0.33)
-	draw_texture(numbers[m], Vector2(x,y), c); x += numbers[m].get_width()
-	draw_texture(numbers[10], Vector2(x,y), c); x += numbers[10].get_width()
-	draw_texture(numbers[s1], Vector2(x,y), c); x += numbers[s1].get_width()
-	draw_texture(numbers[s2], Vector2(x,y), c)
+	# im 99% sure i could do transform once and then just offset the pos but 
+	# honestly im too lazy for this
+	var x := 910
+	var y := 560
+	var c := Color(1,1,1,0.1)
+	var s := Vector2(0.8,0.8)
+	var e := Vector2(0,0)
+	
+	draw_set_transform(Vector2(x,y), 0.0, s); draw_texture(numbers[m], e, c); x += numbers[m].get_width() - 5
+	draw_set_transform(Vector2(x,y), 0.0, s); draw_texture(numbers[10], e, c); x += numbers[10].get_width() - 5
+	draw_set_transform(Vector2(x,y), 0.0, s); draw_texture(numbers[s1], e, c); x += numbers[s1].get_width() - 5
+	draw_set_transform(Vector2(x,y), 0.0, s); draw_texture(numbers[s2], e, c)
