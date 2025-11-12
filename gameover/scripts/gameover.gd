@@ -87,10 +87,10 @@ func _draw():
 func yap():
 	await get_tree().create_timer(randf_range(0.5, 1.2)).timeout
 
-	var yap = AudioStreamPlayer.new()
-	yap.stream = deaths[randi_range(0, deaths.size()-1)]
-	add_child(yap)
-	yap.play()
+	var yapin = AudioStreamPlayer.new()
+	yapin.stream = deaths[randi_range(0, deaths.size()-1)]
+	add_child(yapin)
+	yapin.play()
 
 func restart():
 	$overlay.color = Color(0,0,0)

@@ -20,7 +20,7 @@ func getSaveData():
 		save.set_value("data", "night", 1)
 		night = 1
 		save.save("user://data")		
-	
+		
 
 func _ready() -> void:
 	Engine.max_fps = 100
