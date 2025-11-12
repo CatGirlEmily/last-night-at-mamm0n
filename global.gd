@@ -27,7 +27,7 @@ func _ready() -> void:
 	getSaveData()
 
 func _process(delta: float) -> void:
-	var scene = get_tree().current_scene.name
+	#var scene = get_tree().current_scene.name
 	
 	if Input.is_action_pressed("ESCAPE"): quitTime += 1 * delta
 	if Input.is_action_just_released("ESCAPE"): quitTime = 0
@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("F1"): restart()
 	if Input.is_action_just_pressed("DEL"): deleteData()
 	
-	if dev && Input.is_action_just_pressed("F2"): hour += 1; print(hour)
+	if dev && Input.is_action_just_pressed("F2"): hour += 1
 	if dev && Input.is_action_just_pressed("F3"): nightComplete()
 	if dev && Input.is_action_just_pressed("F4"): get_tree().change_scene_to_file("res://nightfinish/nightfinish.tscn")
 	if dev && Input.is_action_just_pressed("F5"): get_tree().change_scene_to_file("res://gameover/gameover.tscn")

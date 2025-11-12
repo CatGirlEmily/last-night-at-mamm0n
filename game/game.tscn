@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3bwlx02acadf"]
+[gd_scene load_steps=10 format=3 uid="uid://c3bwlx02acadf"]
 
 [ext_resource type="Texture2D" uid="uid://bpfy4po4ua6pg" path="res://game/sprites/office.png" id="1_l1rk1"]
 [ext_resource type="Script" uid="uid://cjm3wbtvh2xhq" path="res://game/scripts/game.gd" id="1_u5opy"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://b1mxorsjy6gpi" path="res://game/sprites/office_back.png" id="3_dxrkv"]
 [ext_resource type="Script" uid="uid://bblsitj11qxn3" path="res://game/scripts/hour.gd" id="3_h7iqs"]
 [ext_resource type="AudioStream" uid="uid://dfk2kkvrnyi15" path="res://game/audio/survive.mp3" id="6_dakft"]
+[ext_resource type="Texture2D" uid="uid://cscfgoc37q0rh" path="res://game/sprites/jumpscare/1.png" id="8_l8g03"]
+[ext_resource type="Script" uid="uid://buxv8lu8tpl1s" path="res://game/scripts/jumpscare.gd" id="9_j8tme"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_u5opy")
@@ -46,3 +48,9 @@ color = Color(0, 0, 0, 1)
 [node name="count" type="Timer" parent="."]
 wait_time = 300.0
 autostart = true
+
+[node name="jumpscare" type="Sprite2D" parent="."]
+position = Vector2(1001.6489, 553.25)
+scale = Vector2(1.6843973, 1.6843972)
+texture = ExtResource("8_l8g03")
+script = ExtResource("9_j8tme")

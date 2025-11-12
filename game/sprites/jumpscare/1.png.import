@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cek34n1hmubi1"
-path="res://.godot/imported/error.png-dea97459e3374ee9c73488cffea228fe.ctex"
+uid="uid://cscfgoc37q0rh"
+path="res://.godot/imported/1.png-181478337391d04dd87a2d438410ab80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://zzz_sprites/error.png"
-dest_files=["res://.godot/imported/error.png-dea97459e3374ee9c73488cffea228fe.ctex"]
+source_file="res://game/sprites/jumpscare/1.png"
+dest_files=["res://.godot/imported/1.png-181478337391d04dd87a2d438410ab80.ctex"]
 
 [params]
 
