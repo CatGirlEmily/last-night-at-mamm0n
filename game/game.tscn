@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://c3bwlx02acadf"]
+[gd_scene load_steps=17 format=3 uid="uid://c3bwlx02acadf"]
 
-[ext_resource type="Texture2D" uid="uid://bpfy4po4ua6pg" path="res://game/sprites/office.png" id="1_l1rk1"]
+[ext_resource type="Texture2D" uid="uid://de1737g5uo3lq" path="res://game/sprites/office.png" id="1_l1rk1"]
 [ext_resource type="Script" uid="uid://cjm3wbtvh2xhq" path="res://game/scripts/game.gd" id="1_u5opy"]
 [ext_resource type="Script" uid="uid://dlsxs63kvdtck" path="res://game/scripts/panorama.gd" id="2_vasa2"]
 [ext_resource type="Texture2D" uid="uid://dr0sw83ccihyq" path="res://game/sprites/am/12am.png" id="3_4fuuu"]
@@ -9,6 +9,13 @@
 [ext_resource type="AudioStream" uid="uid://dfk2kkvrnyi15" path="res://game/audio/survive.mp3" id="6_dakft"]
 [ext_resource type="Texture2D" uid="uid://cscfgoc37q0rh" path="res://game/sprites/jumpscare/1.png" id="8_l8g03"]
 [ext_resource type="Script" uid="uid://buxv8lu8tpl1s" path="res://game/scripts/jumpscare.gd" id="9_j8tme"]
+[ext_resource type="Texture2D" uid="uid://uwevpdeo5v04" path="res://game/sprites/cameraTrigger.png" id="10_3vho3"]
+[ext_resource type="Texture2D" uid="uid://cjcspukikq6fs" path="res://zzz_global/1x1.png" id="10_b686c"]
+[ext_resource type="Script" uid="uid://cldejqi0an3t3" path="res://game/sprites/cameraAnimation.gd" id="11_3vho3"]
+[ext_resource type="Script" uid="uid://diugkq2vsinb6" path="res://game/scripts/camera_trigger.gd" id="11_qf6n1"]
+[ext_resource type="Texture2D" uid="uid://lyrfe4chr5w2" path="res://game/sprites/cam/6.png" id="12_vsp63"]
+[ext_resource type="Texture2D" uid="uid://cqvfp20fh21qo" path="res://game/sprites/cam2/off.png" id="15_ee6o4"]
+[ext_resource type="Script" uid="uid://dy6jrnjya7ymb" path="res://game/scripts/Cameras.gd" id="16_4cobl"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_u5opy")
@@ -43,13 +50,42 @@ offset_right = 1932.0
 offset_bottom = 1095.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
 
 [node name="count" type="Timer" parent="."]
 wait_time = 300.0
 autostart = true
 
 [node name="jumpscare" type="Sprite2D" parent="."]
-position = Vector2(1001.6489, 553.25)
-scale = Vector2(1.6843973, 1.6843972)
+z_index = 6
+position = Vector2(880.5, 556)
+scale = Vector2(4.517493, 2.792746)
 texture = ExtResource("8_l8g03")
 script = ExtResource("9_j8tme")
+
+[node name="cameraTriggerHitbox" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.8863101, 4.3317675e-07, 0.4436626, 1)
+z_index = 200
+position = Vector2(1004.5, 1044.5)
+scale = Vector2(731.0001, 79.00002)
+texture = ExtResource("10_b686c")
+script = ExtResource("11_qf6n1")
+
+[node name="cameraTrigger" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(992, 1041)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("10_3vho3")
+
+[node name="cameraOverlay" type="Sprite2D" parent="."]
+position = Vector2(960, 540.5)
+scale = Vector2(3.9999998, 3.9962962)
+texture = ExtResource("12_vsp63")
+script = ExtResource("11_3vho3")
+
+[node name="Cams" type="Sprite2D" parent="."]
+position = Vector2(960.49994, 539.99994)
+scale = Vector2(3.9979162, 3.9999993)
+texture = ExtResource("15_ee6o4")
+script = ExtResource("16_4cobl")

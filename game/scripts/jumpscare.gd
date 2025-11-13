@@ -9,6 +9,8 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("F7"): _jumpscare()
 
 func _jumpscare():
+	get_parent().get_node("Cams").hide()
+	if get_parent().inCamera: get_parent().get_node("cameraTriggerHitbox").camAnim()
 	global.interact = false
 	AutoLoad.rawr()
 	await get_tree().create_timer(0.33).timeout

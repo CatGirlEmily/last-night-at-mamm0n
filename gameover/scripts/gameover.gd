@@ -89,6 +89,7 @@ func yap():
 
 	var yapin = AudioStreamPlayer.new()
 	yapin.stream = deaths[randi_range(0, deaths.size()-1)]
+	yapin.volume_db = -10
 	add_child(yapin)
 	yapin.play()
 

@@ -12,4 +12,4 @@ stream = ExtResource("2_sbp1w")
 
 [node name="rawr" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_sbp1w")
-volume_db = 8.914
+volume_db = 24.0
