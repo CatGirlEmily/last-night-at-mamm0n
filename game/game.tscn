@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c3bwlx02acadf"]
+[gd_scene load_steps=23 format=3 uid="uid://c3bwlx02acadf"]
 
 [ext_resource type="Texture2D" uid="uid://de1737g5uo3lq" path="res://game/sprites/office.png" id="1_l1rk1"]
 [ext_resource type="Script" uid="uid://cjm3wbtvh2xhq" path="res://game/scripts/game.gd" id="1_u5opy"]
@@ -14,8 +14,14 @@
 [ext_resource type="Script" uid="uid://cldejqi0an3t3" path="res://game/sprites/cameraAnimation.gd" id="11_3vho3"]
 [ext_resource type="Script" uid="uid://diugkq2vsinb6" path="res://game/scripts/camera_trigger.gd" id="11_qf6n1"]
 [ext_resource type="Texture2D" uid="uid://lyrfe4chr5w2" path="res://game/sprites/cam/6.png" id="12_vsp63"]
+[ext_resource type="Texture2D" uid="uid://d1dujf2xbah3y" path="res://game/sprites/panelTrigger.png" id="13_4cobl"]
+[ext_resource type="Script" uid="uid://bngetfkr42yta" path="res://game/scripts/panel_trigger.gd" id="14_ln7ps"]
 [ext_resource type="Texture2D" uid="uid://cqvfp20fh21qo" path="res://game/sprites/cam2/off.png" id="15_ee6o4"]
 [ext_resource type="Script" uid="uid://dy6jrnjya7ymb" path="res://game/scripts/Cameras.gd" id="16_4cobl"]
+[ext_resource type="Texture2D" uid="uid://c3s2q52idw6pj" path="res://game/sprites/panel/1.png" id="17_mhvfb"]
+[ext_resource type="Script" uid="uid://cloq8euq453kg" path="res://game/scripts/panelAnimation.gd" id="17_pxxsx"]
+[ext_resource type="Texture2D" uid="uid://bc58mqkuumpo3" path="res://game/sprites/panel2/off.png" id="20_dxwpq"]
+[ext_resource type="Script" uid="uid://0m5uviu4c7lj" path="res://game/scripts/panel.gd" id="20_u8s88"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_u5opy")
@@ -78,14 +84,41 @@ position = Vector2(992, 1041)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("10_3vho3")
 
+[node name="panelTrigger" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(36.999992, 546.00006)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("13_4cobl")
+
+[node name="panelTriggerHitbox" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.8863101, 4.3317675e-07, 0.4436626, 1)
+z_index = 200
+position = Vector2(34.24997, 548.25)
+scale = Vector2(73.50005, 684.5)
+texture = ExtResource("10_b686c")
+script = ExtResource("14_ln7ps")
+
 [node name="cameraOverlay" type="Sprite2D" parent="."]
 position = Vector2(960, 540.5)
 scale = Vector2(3.9999998, 3.9962962)
 texture = ExtResource("12_vsp63")
 script = ExtResource("11_3vho3")
 
+[node name="panelOverlay" type="Sprite2D" parent="."]
+position = Vector2(134.5, 540.5)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("17_mhvfb")
+script = ExtResource("17_pxxsx")
+
 [node name="Cams" type="Sprite2D" parent="."]
 position = Vector2(960.49994, 539.99994)
 scale = Vector2(3.9979162, 3.9999993)
 texture = ExtResource("15_ee6o4")
 script = ExtResource("16_4cobl")
+
+[node name="Panel" type="Sprite2D" parent="."]
+position = Vector2(689.58496, 540)
+scale = Vector2(1.5798051, 1.5905743)
+texture = ExtResource("20_dxwpq")
+script = ExtResource("20_u8s88")

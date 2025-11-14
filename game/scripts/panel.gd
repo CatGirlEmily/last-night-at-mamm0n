@@ -5,7 +5,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if get_parent().inCamera:
-		if get_parent().get_node("cameraTrigger").visible: show()
+	if get_parent().inPanel:
+		if get_parent().get_node("panelTrigger").visible: show()
 	else: hide()
 	

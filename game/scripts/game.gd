@@ -6,11 +6,15 @@ var t := 0.0
 
 var injumpscare := false
 var inCamera := false
+var inPanel := false
+var maxLeft := true
+var busy := false
 
 func _ready() -> void:
 	$overlay.color.a = 0.0
 	
 func _process(delta: float) -> void:
+	busy = inCamera || inPanel
 	if !injumpscare: global.count = $count.wait_time - $count.time_left
 	
 	if global.hour == 6:

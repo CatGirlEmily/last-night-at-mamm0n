@@ -1,13 +1,14 @@
 extends Sprite2D
 
+
+
 @onready var anim := [
-	load("res://game/sprites/cam/1.png"),
-	load("res://game/sprites/cam/2.png"),
-	load("res://game/sprites/cam/3.png"),
-	load("res://game/sprites/cam/4.png"),
-	load("res://game/sprites/cam/5.png"),
-	load("res://game/sprites/cam/6.png"),
-	load("res://game/sprites/cam/7.png")
+	load("res://game/sprites/panel/1.png"),
+	load("res://game/sprites/panel/2.png"),
+	load("res://game/sprites/panel/3.png"),
+	load("res://game/sprites/panel/4.png"),
+	load("res://game/sprites/panel/5.png"),
+	load("res://game/sprites/panel/6.png")
 ]
 
 var do := false
@@ -26,9 +27,8 @@ func runAnimation():
 
 func _process(delta: float) -> void:
 	if !do: return
-	print(framec)
-	
-	var state = get_parent().inCamera
+
+	var state = get_parent().inPanel
 	frame_timer += delta
 
 	if frame_timer >= frame_time:
@@ -51,5 +51,6 @@ func _process(delta: float) -> void:
 
 func stop():
 	do = false
-	get_parent().get_node("cameraTrigger").show()
+	get_parent().get_node("panelTriggerHitbox").inAnim = false
+	get_parent().get_node("panelTrigger").show()
 	hide()

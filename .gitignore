@@ -1,5 +1,6 @@
 .godot/
 .import/
 *.import
+*.tmp
 
 zzz_git.bat
