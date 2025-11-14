@@ -11,8 +11,16 @@ func _process(delta: float) -> void:
 	if (trigger || Input.is_action_just_pressed("S")) && !stillon && global.interact && !get_parent().injumpscare && get_parent().get_node("cameraTrigger").visible: camAnim()
 	
 
-func camAnim():
+func camAnim():	
+	playSound()
 	stillon = true
 	get_parent().inCamera = !get_parent().inCamera
 	get_parent().get_node("cameraTrigger").hide()
 	get_parent().get_node("cameraOverlay").runAnimation()
+
+func playSound():
+	var pull := AudioStreamPlayer.new()
+	pull.stream = load("res://game/audio/putdown.wav")
+	pull.volume_db = -10
+	add_child(pull)
+	pull.play()

@@ -18,6 +18,11 @@ extends Node2D
 	load("res://gameover/audio/death1.mp3"),
 	load("res://gameover/audio/death2.mp3"),
 	load("res://gameover/audio/death3.mp3"),
+	load("res://gameover/audio/death4.mp3"),
+	load("res://gameover/audio/death5.mp3"),
+	load("res://gameover/audio/death6.mp3"),
+	load("res://gameover/audio/death7.mp3"),
+	load("res://gameover/audio/death8.mp3"),
 ]
 
 var overlay_alpha = 1.0

@@ -9,6 +9,8 @@ var scroll_speed := 600.0
 
 func _process(delta: float) -> void:
 	if !global.interact: return
+	# eksperymentalne, moze nie byc dobrym pomyslem
+	if get_parent().inCamera && !global.panorama_in_camera: return
 	
 	var viewport_size = get_viewport().get_visible_rect().size
 	var cursor_x = get_viewport().get_mouse_position().x

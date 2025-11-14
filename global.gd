@@ -8,6 +8,7 @@ var starting = false
 var hour = -1
 var interact = true
 var count := 0
+var panorama_in_camera := false
 
 func getSaveData():
 	var save = ConfigFile.new()
