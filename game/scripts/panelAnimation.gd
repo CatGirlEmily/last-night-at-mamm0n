@@ -18,7 +18,6 @@ var frame_time := 0.35 / 7.0
 
 func _ready() -> void:
 	texture = anim[framec]
-	hide()
 
 func runAnimation():
 	show()

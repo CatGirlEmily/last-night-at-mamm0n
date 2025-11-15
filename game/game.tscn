@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c3bwlx02acadf"]
+[gd_scene load_steps=24 format=3 uid="uid://c3bwlx02acadf"]
 
 [ext_resource type="Texture2D" uid="uid://de1737g5uo3lq" path="res://game/sprites/office.png" id="1_l1rk1"]
 [ext_resource type="Script" uid="uid://cjm3wbtvh2xhq" path="res://game/scripts/game.gd" id="1_u5opy"]
@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://cloq8euq453kg" path="res://game/scripts/panelAnimation.gd" id="17_pxxsx"]
 [ext_resource type="Texture2D" uid="uid://bc58mqkuumpo3" path="res://game/sprites/panel2/off.png" id="20_dxwpq"]
 [ext_resource type="Script" uid="uid://0m5uviu4c7lj" path="res://game/scripts/panel.gd" id="20_u8s88"]
+[ext_resource type="Texture2D" uid="uid://c8aht3xdg7g6q" path="res://game/sprites/cam2/layout1.png" id="21_5e03w"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_u5opy")
@@ -51,6 +52,7 @@ volume_db = -29.017
 mix_target = 1
 
 [node name="overlay" type="ColorRect" parent="."]
+visible = false
 z_index = 101
 offset_right = 1932.0
 offset_bottom = 1095.0
@@ -63,6 +65,7 @@ wait_time = 300.0
 autostart = true
 
 [node name="jumpscare" type="Sprite2D" parent="."]
+visible = false
 z_index = 6
 position = Vector2(880.5, 556)
 scale = Vector2(4.517493, 2.792746)
@@ -100,24 +103,39 @@ texture = ExtResource("10_b686c")
 script = ExtResource("14_ln7ps")
 
 [node name="cameraOverlay" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(960, 540.5)
 scale = Vector2(3.9999998, 3.9962962)
 texture = ExtResource("12_vsp63")
 script = ExtResource("11_3vho3")
 
 [node name="panelOverlay" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(134.5, 540.5)
 scale = Vector2(1.6, 1.6)
 texture = ExtResource("17_mhvfb")
 script = ExtResource("17_pxxsx")
 
 [node name="Cams" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(960.49994, 539.99994)
 scale = Vector2(3.9979162, 3.9999993)
 texture = ExtResource("15_ee6o4")
 script = ExtResource("16_4cobl")
 
+[node name="cam" type="Sprite2D" parent="Cams"]
+position = Vector2(154.7056, 49.00004)
+scale = Vector2(0.50875455, 0.50875455)
+texture = ExtResource("21_5e03w")
+
+[node name="camDot" type="ColorRect" parent="Cams"]
+offset_left = 137.69673
+offset_top = 106.50003
+offset_right = 143.69673
+offset_bottom = 112.50003
+
 [node name="Panel" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(689.58496, 540)
 scale = Vector2(1.5798051, 1.5905743)
 texture = ExtResource("20_dxwpq")

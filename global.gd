@@ -9,6 +9,7 @@ var hour = -1
 var interact = true
 var count := 0
 var panorama_in_camera := false
+var boink := 0
 
 func getSaveData():
 	var save = ConfigFile.new()
@@ -16,9 +17,11 @@ func getSaveData():
 	
 	if response == OK:
 		night = save.get_value("data", "night")
+		boink = save.get_value("misc", "secret")
 		if night > 6: night = 6
 	else:
 		save.set_value("data", "night", 1)
+		save.set_value("misc", "secret", 0)
 		night = 1
 		save.save("user://data")		
 		
@@ -60,11 +63,13 @@ func nightComplete():
 
 func deleteData():
 	night = 1
+	boink = 0
 	saveData()
 	
 func saveData():
 	var save = ConfigFile.new()
 	save.set_value("data", "night", night)
+	save.set_value("misc", "secret", boink)
 	save.save("user://data")
 
 func isValidHour():

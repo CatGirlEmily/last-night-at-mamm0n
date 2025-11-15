@@ -1,10 +1,5 @@
 extends Sprite2D
 
-func _ready() -> void:
-	hide()
-
-
-
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("F7"): _jumpscare()
 

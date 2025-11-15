@@ -1,8 +1,5 @@
 extends Sprite2D
 
-func _ready() -> void:
-	hide()
-
 
 func _process(delta: float) -> void:
 	if get_parent().inPanel:

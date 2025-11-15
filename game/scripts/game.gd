@@ -11,6 +11,7 @@ var maxLeft := true
 var busy := false
 
 func _ready() -> void:
+	$overlay.show()
 	$overlay.color.a = 0.0
 	
 func _process(delta: float) -> void:

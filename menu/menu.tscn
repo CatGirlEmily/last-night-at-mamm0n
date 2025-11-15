@@ -1,6 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://c3xupys1nh5jm"]
+[gd_scene load_steps=19 format=3 uid="uid://c3xupys1nh5jm"]
 
 [ext_resource type="Script" uid="uid://xmlnapxq6sa" path="res://menu/scripts/fadein.gd" id="1_j0t7f"]
+[ext_resource type="Script" uid="uid://dpxcjneqkwq7d" path="res://menu/scripts/boink.gd" id="2_bpqio"]
+[ext_resource type="AudioStream" uid="uid://bd6r5xxniugv6" path="res://menu/audio/honk.mp3" id="2_o0hb3"]
 [ext_resource type="AudioStream" uid="uid://cm3lnh5f4tyxl" path="res://menu/audio/sus.ogg" id="3_6nwqt"]
 [ext_resource type="Texture2D" uid="uid://d0dge2y8prboy" path="res://menu/sprites/ng.png" id="3_s4hbh"]
 [ext_resource type="Script" uid="uid://djlc1gh0jb8ei" path="res://menu/scripts/new_game.gd" id="4_juveg"]
@@ -19,7 +21,23 @@
 
 [node name="menu" type="Node2D"]
 
+[node name="boink" type="Button" parent="."]
+z_index = 2
+offset_left = 391.0
+offset_top = 354.0
+offset_right = 411.0
+offset_bottom = 378.0
+focus_mode = 0
+flat = true
+icon_alignment = 1
+script = ExtResource("2_bpqio")
+
+[node name="boinkmp3" type="AudioStreamPlayer" parent="boink"]
+stream = ExtResource("2_o0hb3")
+volume_db = -16.488
+
 [node name="fadein" type="ColorRect" parent="."]
+visible = false
 z_index = 99
 offset_left = -7.0
 offset_top = -4.0
